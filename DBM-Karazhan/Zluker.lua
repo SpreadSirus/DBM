@@ -10,8 +10,8 @@ mod:RegisterEvents(
 	"CHAT_MSG_MONSTER_YELL"
 )
 
-local timerMagicCD     = mod:NewCDTimer(79, 305535)
-local timerCombatStart = mod:NewCombatTimer(42)
+local timerMagicCD     = mod:NewCDTimer(45, 305535)
+local timerCombatStart = mod:NewCombatTimer(80)
 -- local warnSound						= mod:NewSoundAnnounce()
 
 function mod:CHAT_MSG_MONSTER_YELL(msg)
@@ -21,7 +21,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 end
 
 function mod:OnCombatStart()
-	timerMagicCD:Start(66)
+	timerMagicCD:Start(45)
 end
 
 function mod:SPELL_CAST_START(args)
